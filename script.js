@@ -35,3 +35,20 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 
     console.log('Message sent:', { name, email, message });
 });
+
+// NEW JS CODE
+
+// Handle the contact form submission with basic validation
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name && email && message) {
+        console.log('Message sent:', { name, email, message });
+        alert('Your message has been sent!');
+    } else {
+        alert('Please fill in all the fields!');
+    }
+});
